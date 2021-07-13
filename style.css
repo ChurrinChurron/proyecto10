@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+
+	--cyan: hsl(179, 62%, 43%);
+	--bri-yellow: hsl(71, 73%, 54%);
+	--neu-li-gray: hsl(204, 43%, 93%);
+	--gray-blue: hsl(218, 22%, 67%);
+
+}
+
+body {
+
+	font-family: 'Karla', sans-serif;
+	display: grid;
+	place-items: center;
+	background: var(--neu-li-gray);
+}
+
+main {
+
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	margin: 20% 8%;
+}
+
+#join {
+
+	background: #fff;
+	padding: 22px;
+	border-radius: 15px 15px 0 0;
+}
+
+#join h3 {
+
+	color: var(--cyan);
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 21px;
+}
+
+#join h4 {
+
+	color: var(--bri-yellow);
+	margin-bottom: 20px;
+}
+
+#join p {
+
+	color: #aeaeae;
+	line-height: 24px;
+}
+
+#subscrip {
+
+	background: var(--cyan);
+	padding: 22px;
+}
+
+#subscrip h3 {
+
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+#subscrip h4 {
+
+	font-weight: 400;
+	font-size: 15px;
+	color: var(--neu-li-gray);
+	margin-bottom: 10px;
+}
+
+#subscrip h4 span {
+
+	color: #fff;
+	font-size: 27px;
+	font-weight: 700;
+	margin-right: 7px;
+
+}
+
+#subscrip p {
+
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+#subscrip a {
+
+	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+	background: var(--bri-yellow);
+	display: block;
+	text-align: center;
+	padding: 12px 0;
+	border-radius: 5px;
+	transition: 0.2s ease-in-out;
+}
+
+#subscrip a:hover {
+
+	background: hsl(71, 75%, 71%);
+	color: hsl(71, 0%, 47%);
+}
+
+#why-us {
+
+	background: hsl(179, 50%, 55%);
+	padding: 22px;
+	border-radius: 0 0 15px 15px;
+}
+
+#why-us h3 {
+
+	color: #fff;
+	font-weight: 700;
+	font-size: 21px;
+	margin-bottom: 20px;
+}
+
+#why-us p {
+
+	color: var(--neu-li-gray);
+	line-height: 25px;
+	font-weight: 400;
+}
+
+@media screen and (min-width: 650px) {
+
+	main {
+
+		grid-template-areas: 'join join'
+							 'subscrip why-us';
+
+		margin: 15% 18%;
+
+	}
+
+	#join {
+
+		grid-area: join;
+		padding: 30px;
+	}
+
+	#join p {
+
+		margin-right: 55px;
+	}
+
+	#subscrip {
+
+		grid-area: subscrip;
+		border-radius: 0 0 0 15px;
+
+	}
+
+	#subscrip a {
+
+		width: 90%;
+		margin-top: 10%;
+
+	}
+
+	#why-us {
+
+		grid-area: why-us;
+		border-radius: 0 0 15px 0;
+		padding-right: 100px;
+	}
+}
